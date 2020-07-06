@@ -1,0 +1,29 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, user-scalable=no" />
+		<link href="site.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div class="canvas">
+			<div class="ring"></div>
+			<div class="ring2"></div>
+		</div>
+		<script>
+			var rotation = document.querySelector(".ring");
+			var frames = [
+				{ transform: "rotate(0deg) translate(100px)" },
+				{ transform: "rotate(360deg) translate(100px) " },
+			];
+			var timing = {
+				duration: 3000,
+				iterations: Infinity,
+				direction: "alternate",
+				easing: "ease-in-out",
+			};
+			rotation.animate(frames, timing);
+		</script>
+	</body>
+</html>

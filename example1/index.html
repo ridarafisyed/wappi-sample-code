@@ -1,0 +1,72 @@
+
+		<!DOCTYPE html>
+		<html lang="en">
+			<head>
+				<meta charset="UTF-8" />
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+				<link rel="stylesheet" href="./css/shapes.css" />
+			</head>
+
+			<body>
+				<div class="header"><h1>Animations Example</h1></div>
+				<div class="canvas">
+					<div class="circle-rim "></div>
+					<div class="cube"></div>
+					<div class="triangle"></div>
+				</div>	
+				<div class="header">
+					<button class="button play" type="input"><i class=
+					"fa fa-play"></i></button>
+					<button class="button pause" type="input">
+						<i class=
+					"fa fa-pause"></i>
+					</button>
+					<button class="button reverse" type="input">
+						<i class=
+					"fa fa-undo"></i>
+					</button>
+
+				</div>
+				
+				<script>
+
+					var keyframe = [ 
+							{transform:"rotate(0deg)",
+							opacity: 0
+						
+							},
+						{transform:'rotate(359deg)',
+						opacity: 1
+					
+						}
+						]
+					var properties ={
+							duration:3000,
+							iterations:Infinity,
+						}
+
+						var cube_rotation = document.querySelector(".cube ").animate( keyframe
+						, 	{
+							duration:5000,
+							iterations:Infinity,
+							delay: 5000,
+
+						}			
+					);
+					var triagle_rotation = document.querySelector(".triangle ").animate( keyframe
+						, properties				
+					);
+					var rotate = document.querySelector(".circle-rim ").animate( keyframe
+						, properties				
+					);
+					document.querySelector(".play").addEventListener("click", ()=> rotate.play() );
+					document.querySelector(".pause").addEventListener("click", ()=> rotate.pause() );
+					document.querySelector(".reverse").addEventListener("click", ()=> rotate.reverse() );
+				</script>
+			</body>
+			
+		</html>
+	</body>
+</html>

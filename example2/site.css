@@ -1,0 +1,37 @@
+/** @format */
+
+body {
+	margin: 0;
+	margin-top: 50vh; /* position at 50% from top */
+	background: #eee;
+	overflow: hidden;
+}
+.canvas {
+	width: 0;
+	height: 0;
+	margin: 0 auto;
+	position: relative;
+}
+.ring {
+	border-radius: 100%; /* i.e., a 'large' value */
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	margin-left: -20px;
+	margin-top: -20px;
+	box-sizing: border-box;
+	border: 5px solid rgba(33, 33, 33, 0.5);
+	border-top: solid 5px red;
+}
+
+.ring2 {
+	border-radius: 100%; /* i.e., a 'large' value */
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	margin-left: -20px;
+	margin-top: -20px;
+	box-sizing: border-box;
+	border: 5px solid rgba(33, 33, 33, 0.5);
+	border-top: solid 5px red;
+}
